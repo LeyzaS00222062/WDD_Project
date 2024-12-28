@@ -1,3 +1,7 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 aside{
     width: 4fr;
     height: fit-content;
@@ -38,4 +42,7 @@ aside{
     background: url("../images/background.png") no-repeat center bottom/cover;
 }
 
+#user_checkout{
+    background: url("../images/background.png") no-repeat center bottom/cover;
+}
 

@@ -1,4 +1,3 @@
-
 // collapsible function
 let coll = document.getElementsByClassName("collapsible");
 let i;
@@ -23,17 +22,6 @@ if (localStorage.getItem('checkout') == null) {
 }
 var checkout=localStorage.getItem('checkout');
 document.querySelector('#checkout').innerHTML=checkout;
-
-//add to cart function
-var addtocart = document.getElementById('addtoCart');
-addtocart.addEventListener("click", addtocart);
-
-function addtoCart(){
-  var total = localStorage.getItem('checkout');
-  total++;
-  localStorage.setItem('checkout', total);
-  document.querySelector('#checkout').innerHTML=total;
-}
 
 //payment
 var element = document.getElementById("payment-failure");

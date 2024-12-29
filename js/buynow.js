@@ -1,12 +1,6 @@
 //checkout 
 var checkout = document.getElementById('buy-now');
 
-if (localStorage.getItem('checkout') == null) {  
-  localStorage.setItem('checkout', 0);
-}
-var checkout=localStorage.getItem('checkout');
-document.querySelector('#checkout').innerHTML=checkout;
-
 //payment
 var element = document.getElementById("payment-failure");
 element.style.display = 'none';

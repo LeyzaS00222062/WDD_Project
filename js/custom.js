@@ -14,6 +14,11 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+if (localStorage.getItem('checkout') == null) {  
+    localStorage.setItem('checkout', 0);
+  }
+  var checkout=localStorage.getItem('checkout');
+  document.querySelector('#checkout').innerHTML=checkout;
 
 if (localStorage.getItem('userdetails') === null) {  
     var userDetails = {firstName:"Nana", lastName:"Mumei", dob:"2000-06-28",address1:"1 Council Drive", address2:"Promiseland"};

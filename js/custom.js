@@ -24,8 +24,8 @@ if (localStorage.getItem('userdetails') === null) {
     var userDetails = {firstName:"Nana", lastName:"Mumei", dob:"2000-06-28",address1:"1 Council Drive", address2:"Promiseland"};
     document.getElementById("firstNameID").setAttribute('value',userDetails.firstName);
     document.getElementById("lastNameID").setAttribute('value',userDetails.lastName);
-      localStorage.setItem('userdetails',JSON.stringify(userDetails));
-  document.getElementById("dobID").setAttribute('value',userDetails.dob);
+    localStorage.setItem('userdetails',JSON.stringify(userDetails));
+    document.getElementById("dobID").setAttribute('value',userDetails.dob);
     document.getElementById("address1ID").setAttribute('value',userDetails.address1);       
     document.getElementById("address2ID").setAttribute('value',userDetails.address2);
 } else {

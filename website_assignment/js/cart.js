@@ -8,3 +8,4 @@ function addToCart(){
   localStorage.setItem('checkout', total);
   document.querySelector('#checkout').innerHTML=total;
 }
+

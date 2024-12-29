@@ -46,3 +46,12 @@ aside{
     background: url("../images/background.png") no-repeat center bottom/cover;
 }
 
+.container{
+    form{
+        align-self: center;
+    }
+    #contact_form{
+        align-content: center;
+    }
+}
+

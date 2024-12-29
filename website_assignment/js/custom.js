@@ -14,45 +14,39 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
-//checkout 
-var checkout = document.getElementById('buy-now');
 
-if (localStorage.getItem('checkout') == null) {  
-  localStorage.setItem('checkout', 0);
+if (localStorage.getItem('userdetails') === null) {  
+    var userDetails = {firstName:"Nana", lastName:"Mumei", dob:"2000-06-28",address1:"1 Council Drive", address2:"Promiseland"};
+    document.getElementById("firstNameID").setAttribute('value',userDetails.firstName);
+    document.getElementById("lastNameID").setAttribute('value',userDetails.lastName);
+      localStorage.setItem('userdetails',JSON.stringify(userDetails));
+  document.getElementById("dobID").setAttribute('value',userDetails.dob);
+    document.getElementById("address1ID").setAttribute('value',userDetails.address1);       
+    document.getElementById("address2ID").setAttribute('value',userDetails.address2);
+} else {
+    
+    userDetails=JSON.parse(localStorage.getItem('userdetails'));
+    document.getElementById("firstNameID").setAttribute('value',userDetails.firstName);
+    document.getElementById("lastNameID").setAttribute('value',userDetails.lastName);
+    document.getElementById("dobID").setAttribute('value',userDetails.dob);
+    document.getElementById("address1ID").setAttribute('value',userDetails.address1);      
+    document.getElementById("address2ID").setAttribute('value',userDetails.address2);
 }
-var checkout=localStorage.getItem('checkout');
-document.querySelector('#checkout').innerHTML=checkout;
 
-//payment
-var element = document.getElementById("payment-failure");
-element.style.display = 'none';
-var element = document.getElementById("payment-success");
-element.style.display = 'none';
 
-//deliver details function
-checkout.addEventListener("click", () => {
-  event.preventDefault();
-  var cardnumber=document.getElementById('cardNumber').value;
-  var cardcvv=document.getElementById('cardCvv').value;
+var userDetailsUpdate = document.getElementById('updatedetails');
 
-  if (cardnumber=="0000 1111 2222 9999" && cardcvv=="910") {
-      alert("payment success");
-      var element = document.getElementById("payment-failure");
-      element.style.display = 'none';
-      var element = document.getElementById("payment-success");
-      element.style.display = 'block';
-      var total=0;
-      localStorage.setItem('checkout',total); 
+userDetailsUpdate.addEventListener("submit", UpdateUserDetails);
 
-  } else {
-      alert("payment failure");
-      var element = document.getElementById("payment-failure");
-      element.style.display = 'block';
-      var element = document.getElementById("payment-success");
-      element.style.display = 'none';
-      var element = document.getElementById("payment-failure");  
+function UpdateUserDetails() {
+    var userDetails={};
+    userDetails.firstName=document.getElementById('firstNameID').value;
+    userDetails.lastName=document.getElementById('lastNameID').value;
+    userDetails.dob=document.getElementById('dobID').value;
+    userDetails.address1=document.getElementById('address1ID').value;   
+    userDetails.address2=document.getElementById('address2ID').value;
+  
+    localStorage.setItem('userdetails',JSON.stringify(userDetails));
 
-  }
-  return false;  
-
-})
+    event.preventDefault();
+}

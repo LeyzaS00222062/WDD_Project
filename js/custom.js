@@ -45,6 +45,7 @@ userDetailsUpdate.addEventListener("submit", UpdateUserDetails);
 
 function UpdateUserDetails() {
     var userDetails={};
+    alert("User Details have been updated!")
     userDetails.firstName=document.getElementById('firstNameID').value;
     userDetails.lastName=document.getElementById('lastNameID').value;
     userDetails.dob=document.getElementById('dobID').value;

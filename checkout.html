@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name='description' content='Contact us page to get in touch with sellers'>
+        <title> Keeb Yours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+  <body>
+    <div class="card">
+        <div class="card-header"><img src="images/keebyours.png" style="max-height: 5em;" alt="Keeb Yours logo" ></div>
+        <div class="card-body">
+            <h4 class="card-title">Check Out</h4>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/keebyours.png" style="max-height: 4em;" alt="Keeb Yours logo" >
+                    </a>
+                    <button
+                        class="navbar-toggler d-lg-none"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="account.html">Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="checkout.html">
+                        <div class="icon-cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-cart5">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                            </svg>
+                            <span class="checkout" style="color: white;"></span>
+                            <button type="button" class="btn btn-light">Check Out</button>
+                        </div>
+                        </a>
+                </div>
+            </nav><br>
+        <div class="container">
+            <h3 class="text-center">Check Out</h3>
+            <div class="row">
+            <div class="col">
+                <h1>CheckOut</h1>
+                <form name="checkout" id="user-checkout" action="checkout.html" method="get">
+                    <fieldset>
+                    <div class="form-row">
+                        <div class="row">
+                        <legend>Delivery Details</legend>
+                        <div class="form-group col-md-3">
+                            <label for="getFirstName">First name:</label>
+                            <input type="text"  id="getFirstName" name="firstname" value="Nana" required>
+                        
+                            <label for="getLastName">Last name:</label> 
+                            <input type="text" c id="getLastName" name="lastname" value="Mumei" required>
+                        </div>
+                        <br>
+
+                            <div class="form-group col-md-3">
+                            <label for="getAddress1">Address Line 1:</label> 
+                            <input type="text"  id="getAddress1" name="address2" value="1 Council Drive" required>
+
+                            <label for="getAddress2">Address Line 2:</label> 
+                            <input type="text" id="getAddress2" name="address2"  value="Promiseland"  required>
+                        </div>
+                        </div>
+                        </div><br>                                              
+                    
+                        <div class="form-row">
+                        <div class="row">
+                        <legend>Payment Details</legend>
+                        <div class="form-group col-md-3">
+                        <label for="getCardName">Name on Card:</label> 
+                        <input type="text" id="cardName" name="cardname" value="Nana Mumei" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                        <label for="getCardNumber">Card Number:</label> 
+                        <input type="text" id="cardNumber" name="cardNumber" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                        <label for="getCardCVV">CVV Numbers:</label> 
+                        <input type="password"  id="cardCvv" name="cardCvv"  required>
+                        </div>
+                        </div>
+                        </div>
+                        </fieldset><br>
+              
+                        <div id="payment-success" role="alert" hidden>
+                            Thank you for your purchase. You will receive delivery details via email. Please return to our <a href="shop.html">Shopping Page</a>.
+                        </div>
+                        <div  id="payment-failure" role="alert" hidden>
+                          There seems to be a problem with the card details you entered.
+                        </div> 
+
+                        <div>
+                            <input type='submit' class="btn btn-primary" id="buy-now" name="buy-now" value="Order Now">
+                        </div>
+                    
+                </form>
+                
+
+            </div>
+        </div>
+    </div>
+        </div>
+        <div class="card-footer">
+            <p>&copy;2024 Keeb Yours</p>
+        </div>
+    </div>
+    <script src="js/buynow.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

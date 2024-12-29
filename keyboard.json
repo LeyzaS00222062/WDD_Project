@@ -1,0 +1,41 @@
+{
+    "products" : [
+        {
+            "id": 1,
+            "name":"Pastel KeyCaps",
+            "price": 20,
+            "image": ".../images/keyboardset.jpg"
+        },
+        {
+            "id": 2,
+            "name":"Mixed Keycaps Kit",
+            "price": 30,
+            "image": ".../images/twoKeycap.jpg"
+        },
+        {
+            "id": 3,
+            "name":"Red and Black Japanese Keycaps",
+            "price": 25,
+            "image": ".../images/red-keycaps.jpg"
+        },
+        {
+            "id": 4,
+            "name":"Mixed Japanese Keycaps",
+            "price": 35,
+            "image": ".../images/keycaps-assortment.jpg"
+        },
+        {
+            "id": 5,
+            "name":"Custom Red Keyboard Kit",
+            "price": 85,
+            "image": ".../images/red-completeKB.jpg"
+        },
+        {
+            "id": 6,
+            "name":"Custom Pastel Keyboard Kit",
+            "price": 75,
+            "image": ".../images/completeKeyboard.jpg"
+        }
+        
+    ]
+}

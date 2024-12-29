@@ -1,0 +1,57 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+aside{
+    width: 4fr;
+    height: fit-content;
+    background-color:rgb(255, 255, 255);         
+    border: 2px solid rgba(90, 26, 87, 0.25);
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+}
+.collapsible{
+    background-color: rgb(182, 232, 245);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid  rgb(86, 174, 196);
+    border-radius: 2px;
+    text-align: left;
+    outline: none;
+    font-size: medium
+}
+.active, .collapsible:hover{
+    background-color: rgb(200, 245, 228);
+    width: 100%;
+}
+.content{
+    padding: 0 18px;
+    background-color: rgb(233, 223, 218);
+    border-radius: 2px;
+    max-height: 0;
+    width: 99%;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+}
+
+.card-header{
+    background: url("../images/background.png") no-repeat center bottom/cover;
+}
+
+#user_checkout{
+    background: url("../images/background.png") no-repeat center bottom/cover;
+}
+
+.container{
+    form{
+        align-self: center;
+    }
+    #contact_form{
+        align-content: center;
+    }
+}
+
